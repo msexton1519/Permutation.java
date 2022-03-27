@@ -104,40 +104,4 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
             throw new UnsupportedOperationException();
         }
     }
-
-    public static void main(String[] args) {
-        RandomizedQueue<Integer> q = new RandomizedQueue<>();
-        StdOut.println(q.size() + " " + q.size);
-
-        for (int i = 0; i < 10; i++) {
-            q.enqueue(i);
-        }
-
-        int check = q.sample();
-        while (check != 9) {
-            check = q.sample();
-            StdOut.println(check + " check");
-        }
-        
-        StdOut.println(q.sample() + " sample");
-        StdOut.println(q.size() + " size");
-        for (Integer i : q) {
-            StdOut.println(i + " itr test");
-        }
-
-        int n = 5;
-        RandomizedQueue<Integer> queue = new RandomizedQueue<Integer>();
-        for (int i = 0; i < n; i++)
-            queue.enqueue(i);
-        for (int a : queue) {
-            for (int b : queue)
-                StdOut.print(a + "-" + b + " ");
-            StdOut.println();
-        }
-
-        RandomizedQueue<Integer> q2 = new RandomizedQueue<>();
-        q2.enqueue(5);
-        StdOut.println(q2.dequeue());
-        q2.enqueue(5);
-    }
 }
